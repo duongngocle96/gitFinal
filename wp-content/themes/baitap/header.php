@@ -19,13 +19,6 @@
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/assets/css/fontawesome.css">
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/assets/css/templatemo-stand-blog.css">
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/assets/css/owl.css">
-<!--
-
-TemplateMo 551 Stand Blog
-
-https://templatemo.com/tm-551-stand-blog
-
--->
   </head>
 
   <body>
@@ -49,25 +42,17 @@ https://templatemo.com/tm-551-stand-blog
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="index.html">Home
-                  <span class="sr-only">(current)</span>
-                </a>
-              </li> 
-              <li class="nav-item">
-                <a class="nav-link" href="about.html">About Us</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="blog.html">Blog Entries</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="post-details.html">Post Details</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact Us</a>
-              </li>
-            </ul>
+          <?php 
+            $walker = new nav_walker;
+            wp_nav_menu( 
+                  array( 
+                      'theme_location' => 'header-main',
+                      'container' => 'false',
+                      'menu_class' => 'navbar-nav ml-auto',
+                      'menu_id' => '',
+                      'walker' => $walker,
+                   ) 
+                ); ?>
           </div>
         </div>
       </nav>
