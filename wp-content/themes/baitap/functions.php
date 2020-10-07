@@ -14,9 +14,41 @@
 		register_nav_menu('header-main',__('menu main'));
 		register_nav_menu('header-category',__('menu categories'))
 		;
-		
+				//đăng kí saidebar..
+		if (function_exists('register_sidebar')){
+    		register_sidebar(array(
+			    'name'=> 'Cột bên',
+			    'id' => 'sidebar',
+		));
+		}
+		//đếm số view trong bài viêt..
+		function setpostview( $postID ) {
+			 $count_key = 'views';
+			 $count     = get_post_meta( $postID, $count_key, true );
+			 if ( $count == '' ) {
+			 	  $count = 0;
+			 delete_post_meta( $postID, $count_key );
+			 add_post_meta( $postID, $count_key, '0' ); 
+			 }else{
+			 	  $count++;
+			 update_post_meta( $postID, $count_key, $count );
+
+			 }	
+		} 
+		function getpostview( $postID ) {
+			 $count_key = 'views';
+			 $count     =get_post_meta( $postID, $count_key, true );
+			 if ( $count == '' ) {
+
+			 delete_post_meta( $postID, $count_key );
+			 add_post_meta( $postID, $count_key, '0' );
+			 return "0";
+			 }   
+			 return $count;
+		}
 	}
-add_action('init', 'initTheme');
+	add_theme_support( 'post-thumbnails' );
+	add_action('init', 'initTheme');
 
 
 class nav_walker extends Walker_Nav_Menu {

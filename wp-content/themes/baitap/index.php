@@ -5,11 +5,12 @@
     <!-- Banner Starts Here -->
     <div class="main-banner header-text">
       <div class="container-fluid">
+        <div class="owl-banner owl-carousel">
         <?php get_template_part('slider'); ?>
+      </div>
       </div>
     </div>
     <!-- Banner Ends Here -->
-
     <section class="call-to-action">
       <div class="container">
         <div class="row">
