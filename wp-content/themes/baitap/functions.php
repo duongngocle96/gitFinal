@@ -12,8 +12,8 @@
 		add_filter('use_block_editor_for_post','__return_false');
 		//đăng kí các menu..
 		register_nav_menu('header-main',__('menu main'));
-		register_nav_menu('header-category',__('menu categories'))
-		;
+		register_nav_menu('header-category',__('menu categories'));
+		register_nav_menu('menu_footer',__('menu footer'));
 				//đăng kí saidebar..
 		if (function_exists('register_sidebar')){
     		register_sidebar(array(

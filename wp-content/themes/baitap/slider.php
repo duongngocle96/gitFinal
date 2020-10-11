@@ -17,7 +17,7 @@
                            <span><?php
                            global $post;
                            $terms = get_the_terms( $post->ID , 'category_slider' );
-                              foreach ( $terms as $term ) {
+                              foreach ( $terms as $term ) { 
                               echo $term->name;
                               }
                                 ?>
