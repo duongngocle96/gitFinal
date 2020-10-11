@@ -11,21 +11,36 @@
                     <div class="sidebar-heading">
                       <h2>Recent Posts</h2>
                     </div>
+
+                      
+
                     <div class="content">
-                      <ul>
-                        <li><a href="post-details.html">
-                          <h5>Vestibulum id turpis porttitor sapien facilisis scelerisque</h5>
-                          <span>May 31, 2020</span>
-                        </a></li>
-                        <li><a href="post-details.html">
-                          <h5>Suspendisse et metus nec libero ultrices varius eget in risus</h5>
-                          <span>May 28, 2020</span>
-                        </a></li>
-                        <li><a href="post-details.html">
-                          <h5>Swag hella echo park leggings, shaman cornhole ethical coloring</h5>
-                          <span>May 14, 2020</span>
-                        </a></li>
-                      </ul>
+
+                    <ul>
+
+
+
+                                              <?php 
+                                              $args = array( 'post_type' => 'post',
+                                                        'post_status'=> 'publish',
+                                                        'posts_per_page' => 6,
+                                                        );
+                                              ?>
+                                            <?php $getposts = new WP_query( $args);?>
+                                            <?php global $wp_query; 
+                                            $wp_query->in_the_loop = true; ?>
+                                            <?php while ($getposts->have_posts()) : $getposts->the_post(); ?>
+
+                                              <li><a href="<?php the_permalink(); ?>">
+                                                  <h5><?php the_title(); ?></h5>
+                                                  <span><?php echo get_the_date('d - m -Y');?></span>
+                                                </a></li>
+                                                
+                                              
+                                            <?php endwhile; wp_reset_postdata(); ?>
+                                              </ul>
+
+                     
                     </div>
                   </div>
                 </div>
@@ -36,12 +51,14 @@
                     </div>
                     <div class="content">
                       <ul>
-                        <li><a href="#">- Nature Lifestyle</a></li>
-                        <li><a href="#">- Awesome Layouts</a></li>
-                        <li><a href="#">- Creative Ideas</a></li>
-                        <li><a href="#">- Responsive Templates</a></li>
-                        <li><a href="#">- HTML5 / CSS3 Templates</a></li>
-                        <li><a href="#">- Creative &amp; Unique</a></li>
+                    <?php wp_nav_menu( 
+                  array( 
+                      'theme_location' => 'header-category', 
+                      'container' => 'false', 
+                      'menu_id' => 'header-category', 
+                      'menu_class' => 'header-category'
+                   ) 
+                ); ?>
                       </ul>
                     </div>
                   </div>
