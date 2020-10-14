@@ -23,7 +23,7 @@
                                               <?php 
                                               $args = array( 'post_type' => 'post',
                                                         'post_status'=> 'publish',
-                                                        'posts_per_page' => 6,
+                                                        'posts_per_page' => 5,
                                                         );
                                               ?>
                                             <?php $getposts = new WP_query( $args);?>
@@ -51,14 +51,18 @@
                     </div>
                     <div class="content">
                       <ul>
-                    <?php wp_nav_menu( 
-                  array( 
-                      'theme_location' => 'header-category', 
-                      'container' => 'false', 
-                      'menu_id' => 'header-category', 
-                      'menu_class' => 'header-category'
-                   ) 
-                ); ?>
+
+                         <li><a href="#">
+                          <?php  wp_nav_menu( 
+                              array( 
+                                  'theme_location' => 'header-category', 
+                                  'container' => 'false', 
+                                  'menu_id' => 'header-category', 
+                                  'menu_class' => 'header-category'
+                               ) 
+                          ); ?>
+                            
+                          </a></li>
                       </ul>
                     </div>
                   </div>
@@ -70,13 +74,8 @@
                     </div>
                     <div class="content">
                       <ul>
-                        <li><a href="#">Lifestyle</a></li>
-                        <li><a href="#">Creative</a></li>
-                        <li><a href="#">HTML5</a></li>
-                        <li><a href="#">Inspiration</a></li>
-                        <li><a href="#">Motivation</a></li>
-                        <li><a href="#">PSD</a></li>
-                        <li><a href="#">Responsive</a></li>
+                        <li><a href="#"><?php the_tags(); ?></a></li>
+
                       </ul>
                     </div>
                   </div>
