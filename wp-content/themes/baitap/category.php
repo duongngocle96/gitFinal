@@ -69,7 +69,13 @@
                   <?php endwhile; else : ?>
                   <p> Chuyên Mục Chưa Có Post Nào </p>
                   <?php endif; ?>
-              
+
+                  <?php wp_get_pagination($wp_query); ?>
+
+            
+            
+
+            
             </div>
 
           </div>

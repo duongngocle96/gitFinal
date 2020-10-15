@@ -71,7 +71,22 @@
                     </div>
                     <div class="content">
                       <ul>
-                        <li><a href="#"><?php the_tags(); ?></a></li>
+                        <li><?php 
+
+                            $tags = get_tags();
+
+                            foreach ( $tags as $tag ) 
+                           {
+                              echo '<a>';
+
+                             //print_r($tag);
+                              echo $tag_name=$tag->name;
+
+                             
+                          }
+                           ;
+                         ?>
+                         </li>
 
                       </ul>
                     </div>

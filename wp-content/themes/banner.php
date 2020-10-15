@@ -5,8 +5,7 @@
 <section class="call-to-action">
       <div class="container">
         <div class="row">
-          <div class="col-lg-12">
-            <div class="main-content">
+          <div class="col-lg-12">            <div class="main-content">
               <div class="row">
                 <div class="col-lg-8">
                   <span>Stand Blog HTML5 Template</span>

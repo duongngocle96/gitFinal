@@ -11,7 +11,6 @@
       </div>
     </div>
 
-    RrRRRR
     <!-- Banner Ends Here -->
     <?php get_template_part('banner'); ?>
     
@@ -33,23 +32,10 @@
           </div>
         </div>
       </div>
-<!--       <?php 
-      if(paginate_links()!='') {?>
-  <div class="quatrang">
-    <?php
-    global $wp_query;
-    $big = 999999999;
-    echo paginate_links( array(
-      'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
-      'format' => '?paged=%#%',
-      'prev_text'    => __('« Mới hơn'),
-      'next_text'    => __('Tiếp theo »'),
-      'current' => max( 1, get_query_var('paged') ),
-      'total' => $wp_query->max_num_pages
-      ) );
-      ?>
-  </div>
-<?php } ?> -->
+ 
     </section>
 
 <?php get_footer(); ?>
+    
+
+    

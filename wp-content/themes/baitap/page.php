@@ -9,7 +9,7 @@
               <div class="col-lg-12">
                <div class="text-content">
                 <h4><?php the_title(); ?></h4>
-                <h2>more about us!</h2>
+                <h2><?php echo get_post_meta( get_the_ID(),'excerpt_page', true ); ?></h2>
               </div>
               </div>
             </div>

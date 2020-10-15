@@ -228,18 +228,30 @@ if ( ! function_exists( 'baitap_entry_content' ) ) {
  
   }
 }
+//remove_filter( 'the_content', 'wpautop' );
 
-/**
-@ Hàm hiển thị tag của post
-@ thachpham_entry_tag()
-**/
-if ( ! function_exists( 'thachpham_entry_tag' ) ) {
-  function thachpham_entry_tag() {
-    if ( has_tag() ) :
-      echo '<div class="entry-tag">';
-      printf( __('Tagged in %1$s', ''), get_the_tag_list( '', ', ' ) );
-      echo '</div>';
-    endif;
-  }
+
+function wp_get_pagination($getposts)
+{
+  $big = 999999999; // need an unlikely integer
+  global $wp_query;
+  $pages = paginate_links(array(
+    'base' => str_replace($big, '%#%', esc_url(get_pagenum_link($big))),
+    'format' => '?paged=%#%',
+    'prev_text'    => __('<<'),
+    'next_text'    => __('>>'),
+    'current' => max(1, get_query_var('paged')),
+    'total' => $getposts->max_num_pages,
+    'type'  => 'array',
+
+  ));
+  
+    if( is_array( $pages ) ) {
+        $paged = ( get_query_var('paged') == 0 ) ? 1 : get_query_var('paged');
+        echo '<div class="col-lg-12"><ul class="page-numbers">';
+        foreach ( $pages as $page ) {
+                echo "<li>$page</li>";
+        }
+       echo '</ul></div>';
+        }
 }
-remove_filter( 'the_content', 'wpautop' );
