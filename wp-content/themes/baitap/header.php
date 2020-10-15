@@ -19,6 +19,8 @@
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/assets/css/fontawesome.css">
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/assets/css/templatemo-stand-blog.css">
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/assets/css/owl.css">
+        <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/assets/css/custom.css">
+
   </head>
 
   <body>

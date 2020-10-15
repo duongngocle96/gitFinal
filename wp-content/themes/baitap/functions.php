@@ -124,11 +124,11 @@ public function start_el( &$output, $item, $depth = 0, $args = null, $id = 0 ) {
 @ Nhưng sẽ hiển thị trong single nếu post đó có format là Image
 @ thachpham_thumbnail( $size )
 **/
-if ( ! function_exists( 'thachpham_thumbnail' ) ) {
-  function thachpham_thumbnail( $size ) {
+if ( ! function_exists( 'baitap_thumbnail' ) ) {
+  function baitap_thumbnail( $size ) {
  
     // Chỉ hiển thumbnail với post không có mật khẩu
-    if ( ! is_single() &&  has_post_thumbnail()  && ! post_password_required() || has_post_format( 'image' ) ) : ?>
+    if ( ! is_page() &&  has_post_thumbnail()  && ! post_password_required() || has_post_format( 'image' ) ) : ?>
       <figure class="post-thumbnail"><?php the_post_thumbnail( $size ); ?></figure><?php
     endif;
   }
@@ -139,9 +139,9 @@ if ( ! function_exists( 'thachpham_thumbnail' ) ) {
 @ Còn ở trang chủ và trang lưu trữ, nó sẽ là thẻ <h2>
 @ thachpham_entry_header()
 **/
-if ( ! function_exists( 'thachpham_entry_header' ) ) {
-  function thachpham_entry_header() {
-    if ( is_single() ) : ?>
+if ( ! function_exists( 'baitap_entry_header' ) ) {
+  function baitap_entry_header() {
+    if ( is_page() ) : ?>
  
       <h1 class="entry-title">
         <a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
@@ -158,15 +158,47 @@ if ( ! function_exists( 'thachpham_entry_header' ) ) {
     endif;
   }
 }
-
+/**
+@ Hàm hiển thị thông tin của post (Post Meta)
+@ thachpham_entry_meta()
+**/
+if( ! function_exists( 'baitap_entry_meta' ) ) {
+  function bbaitapaitap_entry_meta() {
+    if ( ! is_page() ) :
+      echo '<div class="entry-meta">';
+ 
+        // Hiển thị tên tác giả, tên category và ngày tháng đăng bài
+        printf( __('<span class="author">Posted by %1$s</span>', 'baitap'),
+          get_the_author() );
+ 
+        printf( __('<span class="date-published"> at %1$s</span>', 'baitap'),
+          get_the_date() );
+ 
+        printf( __('<span class="category"> in %1$s</span>', 'baitap'),
+          get_the_category_list( ', ' ) );
+ 
+        // Hiển thị số đếm lượt bình luận
+        if ( comments_open() ) :
+          echo ' <span class="meta-reply">';
+            comments_popup_link(
+              __('Leave a comment', 'baitap'),
+              __('One comment', 'baitap'),
+              __('% comments', 'baitap'),
+              __('Read all comments', 'baitap')
+             );
+          echo '</span>';
+        endif;
+      echo '</div>';
+    endif;
+  }}
 
 /*
  * Thêm chữ Read More vào excerpt
  */
-function thachpham_readmore() {
-  return '...<a class="read-more" href="'. get_permalink( get_the_ID() ) . '">' . __('Read More', 'thachpham') . '</a>';
+function baitap_readmore() {
+  return '...<a class="read-more" href="'. get_permalink( get_the_ID() ) . '">' . __('Read More', 'baitap') . '</a>';
 }
-add_filter( 'excerpt_more', 'thachpham_readmore' );
+add_filter( 'excerpt_more', 'baitap_readmore' );
  
 /**
 @ Hàm hiển thị nội dung của post type
@@ -174,17 +206,40 @@ add_filter( 'excerpt_more', 'thachpham_readmore' );
 @ Nhưng nó sẽ hiển thị toàn bộ nội dung của post ở trang single (the_content)
 @ thachpham_entry_content()
 **/
-if ( ! function_exists( 'thachpham_entry_content' ) ) {
-  function thachpham_entry_content() {
+if ( ! function_exists( 'baitap_entry_content' ) ) {
+  function baitap_entry_content() {
  
-    if ( ! is_single() ) :
+    if ( ! is_page()) :
       the_excerpt();
     else :
       the_content();
-
  
+      /*
+       * Code hiển thị phân trang trong post type
+       */
+      $link_pages = array(
+        'before' => __('<p>Page:', 'baitap'),
+        'after' => '</p>',
+        'nextpagelink'     => __( 'Next page', 'baitap' ),
+        'previouspagelink' => __( 'Previous page', 'baitap' )
+      );
+      wp_link_pages( $link_pages );
     endif;
  
   }
 }
 
+/**
+@ Hàm hiển thị tag của post
+@ thachpham_entry_tag()
+**/
+if ( ! function_exists( 'thachpham_entry_tag' ) ) {
+  function thachpham_entry_tag() {
+    if ( has_tag() ) :
+      echo '<div class="entry-tag">';
+      printf( __('Tagged in %1$s', ''), get_the_tag_list( '', ', ' ) );
+      echo '</div>';
+    endif;
+  }
+}
+remove_filter( 'the_content', 'wpautop' );

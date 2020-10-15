@@ -16,11 +16,8 @@
 
                     <div class="content">
 
-                    <ul>
-
-
-
-                                              <?php 
+                                        <ul>
+                                            <?php 
                                               $args = array( 'post_type' => 'post',
                                                         'post_status'=> 'publish',
                                                         'posts_per_page' => 5,
@@ -38,7 +35,7 @@
                                                 
                                               
                                             <?php endwhile; wp_reset_postdata(); ?>
-                                              </ul>
+                                          </ul>
 
                      
                     </div>

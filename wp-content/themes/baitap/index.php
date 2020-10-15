@@ -10,6 +10,8 @@
       </div>
       </div>
     </div>
+
+    RrRRRR
     <!-- Banner Ends Here -->
     <?php get_template_part('banner'); ?>
     

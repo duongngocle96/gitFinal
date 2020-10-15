@@ -1,9 +1,7 @@
 
 <?php get_header(); ?>
 
-    <!-- Page Content -->
-    <!-- Banner Starts Here -->
-    <!-- Banner Starts Here -->
+
     <div class="heading-page header-text">
       <section class="page-heading">
         <div class="container">
@@ -68,7 +66,8 @@
                 </div>
               
 
-                  <?php endwhile;?>
+                  <?php endwhile; else : ?>
+                  <p> Chuyên Mục Chưa Có Post Nào </p>
                   <?php endif; ?>
               
             </div>
