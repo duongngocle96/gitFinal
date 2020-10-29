@@ -21,6 +21,7 @@
     
     <section class="blog-posts">
       <div class="container">
+
         <div class="row">
           <div class="col-lg-8">
             <div class="all-blog-posts">
@@ -40,6 +41,7 @@
                     <div class="down-content">
                       <span><?php
                            global $post;
+                           global $wp_query;
                            $terms = get_the_terms( $post->ID , 'category' );
                               foreach ( $terms as $term ) { 
                               echo $term->name;
@@ -64,18 +66,10 @@
                     </div>
                   </div>
                 </div>
-              
-
-                  <?php endwhile; else : ?>
+                <?php endwhile; else : ?>
                   <p> Chuyên Mục Chưa Có Post Nào </p>
                   <?php endif; ?>
-
                   <?php wp_get_pagination($wp_query); ?>
-
-            
-            
-
-            
             </div>
 
           </div>

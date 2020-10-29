@@ -9,7 +9,7 @@
             <div class="col-lg-12">
               <div class="text-content">
                 <h4>RECENT POSTS</h4>
-                <h2>OUR RECENT BLOG ENTRIES</h2>
+                  <h2><?php echo get_post_meta( get_the_ID(),'the_excerpt_page', true ); ?>    </h2>
               </div>
             </div>
           </div>

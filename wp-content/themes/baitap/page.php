@@ -9,7 +9,7 @@
               <div class="col-lg-12">
                <div class="text-content">
                 <h4><?php the_title(); ?></h4>
-                <h2><?php echo get_post_meta( get_the_ID(),'excerpt_page', true ); ?></h2>
+                <h2><?php echo get_post_meta( get_the_ID(),'the_excerpt_page', true ); ?></h2>
               </div>
               </div>
             </div>
@@ -29,6 +29,20 @@
                     <?php ( is_single() ? baitap_entry_tag() : '' ); ?>
                       </div>
                   </article>
+
+        <?php    if ( is_page() ) : ?>
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul  class="social-icons">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+    <?php endif ;?>
               </div>
             </div>
           </div>

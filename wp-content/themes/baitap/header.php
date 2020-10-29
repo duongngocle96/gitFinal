@@ -13,18 +13,13 @@
 
     <!-- Bootstrap core CSS -->
     <link href="<?php bloginfo('stylesheet_directory'); ?>/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-
-    <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/assets/css/fontawesome.css">
-    <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/assets/css/templatemo-stand-blog.css">
-    <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/assets/css/owl.css">
-        <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/assets/css/custom.css">
-
+      <?php
+      wp_head();
+      ?>
   </head>
 
   <body>
-
+    <div>
     <!-- ***** Preloader Start ***** -->
     <div id="preloader">
         <div class="jumper">
@@ -39,7 +34,7 @@
     <header class="">
       <nav class="navbar navbar-expand-lg">
         <div class="container">
-          <a class="navbar-brand" href="index.php"><h2>Stand Blog<em>.</em></h2></a>
+          <a class="navbar-brand" href="http://localhost:8080/wordpress1"><h2>Stand Blog<em>.</em></h2></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>

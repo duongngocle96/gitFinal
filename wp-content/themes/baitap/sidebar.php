@@ -1,9 +1,13 @@
 <div class="row">
                 <div class="col-lg-12">
                   <div class="sidebar-item search">
-                    <form id="search_form" name="gs" method="GET" action="#">
-                      <input type="text" name="q" class="searchText" placeholder="type to search..." autocomplete="on">
-                    </form>
+
+                      <form action="<?php bloginfo('url'); ?>/" method="GET" role="form">
+                          <div class="form-group">
+                              <input type="hidden" name="post_type" value="post"> <!-- or value = page , product -->
+                              <input type="text" name="s" class="searchText" id="" placeholder="search">
+                          </div>
+                      </form>
                   </div>
                 </div>
                 <div class="col-lg-12">

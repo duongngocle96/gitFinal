@@ -25,11 +25,17 @@
                           </div>
                           <a target="_blank" href="<?php echo get_post_meta( get_the_ID(),'slider', true ); ?>"><h4><?php the_title(); ?></h4></a>
 
-                          <ul class="post-info">
-                            <li><a href="#"><?php the_author(); ?></a></li>
-                            <li><a href="#"><?php echo get_the_date('d - m -Y');?></a></li>
-                            <li><a href="#">12 Comments</a></li>
-                          </ul>
+<!--                          <ul class="post-info"-->
+<!--                            <li><a href="#">--><?php //echo get_the_date('d - m -Y');?><!--</a></li>-->
+<!--                            <li><a href="#">--><?php
+//                                    comments_number(
+//                                        __('0 comments'),
+//                                        __('1 comment'),
+//                                        __('% comments'),
+//                );
+//
+//                                    ?><!--</a></li>-->
+<!--                          </ul>-->
                         </div>
 
                       </div>
@@ -38,5 +44,6 @@
                   <?php endif; ?>
                   <?php wp_reset_query();
                 ?>
+                
          
 

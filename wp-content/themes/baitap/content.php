@@ -31,7 +31,14 @@
                       <ul class="post-info">
                         <li><a href="#"><?php the_author(); ?></a></li>
                         <li><a href="#"><?php echo get_the_date('d - m -Y');?></a></li>
-                        <li><a href="#">12 Comments</a></li>
+                        <li><a href="#"><?php
+                                comments_number(
+                                    __('0 comments'),
+                                    __('1 comment'),
+                                    __('% comments'),
+                );
+
+                                ?></a></li>
                       </ul>
                       <?php the_excerpt(); ?>
                       <div class="post-options">
@@ -39,7 +46,14 @@
                           <div class="col-6">
                             <ul class="post-tags">
                               <li><i class="fa fa-tags"></i></li>
-                              <li><a href="#"><?php the_tags(); ?></a></li>
+                              <li><a href="#"><?php
+                                      $tags = get_tags(array(
+                                          'hide_empty' => false
+                                      ));
+
+                                      echo $tags->name ;
+
+                                      ?></a></li>
                              
                             </ul>
                           </div>
@@ -61,7 +75,7 @@
 
                 <div class="col-lg-12">
                   <div class="main-button">
-                    <a href="blog.html">View All Posts</a>
+                    <a href="http://localhost:8080/wordpress1/blog/">View All Posts</a>
                   </div>
                 </div>
               </div>

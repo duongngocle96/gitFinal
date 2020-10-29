@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7490f318-e045-46ef-b953-c5fd025245be" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/baitap/comments.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/baitap/core/init.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/baitap/core/option.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/baitap/core/options.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/baitap/core/plugins.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/baitap/search.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-config.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/baitap/._screenshot.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/baitap/assets/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/baitap/assets/css/custom.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/baitap/banner.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/baitap/banner.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/baitap/category.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/baitap/category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/baitap/content.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/baitap/content.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/baitap/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/baitap/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/baitap/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/baitap/functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/baitap/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/baitap/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/baitap/page-blog.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/baitap/page-blog.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/baitap/page.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/baitap/page.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/baitap/post-details.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/baitap/sidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/baitap/sidebar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/baitap/single.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/baitap/single.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/baitap/slider.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/baitap/slider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/banner.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/banner.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="hiddenUrls">
+      <set>
+        <option value="https://github.com/duongngocle96/gitFinal" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1j3l3TkKQCaW2W78E9MPgR2k9qy" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7490f318-e045-46ef-b953-c5fd025245be" name="Default Changelist" comment="" />
+      <created>1603040456709</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1603040456709</updated>
+      <workItem from="1603040458153" duration="1084000" />
+      <workItem from="1603072113032" duration="386000" />
+      <workItem from="1603072609216" duration="8621000" />
+      <workItem from="1603100062787" duration="1435000" />
+      <workItem from="1603102254610" duration="11631000" />
+      <workItem from="1603179805052" duration="423000" />
+      <workItem from="1603180232879" duration="1648000" />
+      <workItem from="1603331893175" duration="19620000" />
+      <workItem from="1603420247321" duration="9131000" />
+      <workItem from="1603680296648" duration="8900000" />
+      <workItem from="1603694434686" duration="11850000" />
+      <workItem from="1603935762554" duration="258000" />
+      <workItem from="1603936025667" duration="5662000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="442" y="260" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1603349754463">
+      <screen x="0" y="23" width="1440" height="823" />
+    </state>
+    <state x="442" y="259" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900@0.0.1440.900" timestamp="1603094730541" />
+    <state x="442" y="260" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.823@0.23.1440.823" timestamp="1603349754463" />
+    <state x="249" y="53" key="SettingsEditor" timestamp="1603339783794">
+      <screen x="0" y="23" width="1440" height="823" />
+    </state>
+    <state x="249" y="53" key="SettingsEditor/0.23.1440.823@0.23.1440.823" timestamp="1603339783793" />
+    <state x="405" y="170" width="670" height="676" key="search.everywhere.popup" timestamp="1603937011641">
+      <screen x="0" y="23" width="1440" height="823" />
+    </state>
+    <state x="405" y="170" width="670" height="676" key="search.everywhere.popup/0.23.1440.823@0.23.1440.823" timestamp="1603937011641" />
+  </component>
+</project>

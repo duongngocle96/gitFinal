@@ -71,64 +71,13 @@
                   </div>
                     <?php endwhile; else : ?>
                     <?php endif; ?>
-                                    <div class="col-lg-12">
-                    <div class="sidebar-item comments">
-                      <div class="sidebar-heading">
-                        <h2> comments</h2>
-                      </div>
-                      <div class="content">
-                        <ul>
-                          <li>
-                            <div class="author-thumb">
-                           <?php echo get_avatar( get_the_author_meta( 'ID' ) ); ?>
-                            </div>
-                            <div class="right-content">
-                              <h4><?php the_author(); ?><span><?php echo get_the_date('d - m -Y');?></span></h4>
-                               <p><?php echo get_the_author_meta( 'description' ); ?></p>
-                            </div>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-12">
-                    <div class="sidebar-item submit-comment">
-                      <div class="sidebar-heading">
-                        <h2>Your comment</h2>
-                      </div>
-                      <div class="content">
-                        <form id="comment" action="#" method="post">
-                          <div class="row">
-                            <div class="col-md-6 col-sm-12">
-                              <fieldset>
-                                <input name="name" type="text" id="name" placeholder="Your name" required="">
-                              </fieldset>
-                            </div>
-                            <div class="col-md-6 col-sm-12">
-                              <fieldset>
-                                <input name="email" type="text" id="email" placeholder="Your email" required="">
-                              </fieldset>
-                            </div>
-                            <div class="col-md-12 col-sm-12">
-                              <fieldset>
-                                <input name="subject" type="text" id="subject" placeholder="Subject">
-                              </fieldset>
-                            </div>
-                            <div class="col-lg-12">
-                              <fieldset>
-                                <textarea name="message" rows="6" id="message" placeholder="Type your comment" required=""></textarea>
-                              </fieldset>
-                            </div>
-                            <div class="col-lg-12">
-                              <fieldset>
-                                <button type="submit" id="form-submit" class="main-button">Submit</button>
-                              </fieldset>
-                            </div>
-                          </div>
-                        </form>
-                      </div>
-                    </div>
-                  </div>
+
+                     <?php
+                     if(comments_open() || get_comments_number()){
+                         comments_template();
+                     }
+
+                     ?>
                  </div>
               </div>
             </div> 

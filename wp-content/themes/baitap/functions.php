@@ -1,4 +1,7 @@
-<?php 
+<?php
+    define( 'THEME_URL' , get_stylesheet_directory());
+    define('CORE', THEME_URL . "/core");
+    require_once( CORE . "/init.php" );
 	//code mặc định khi lập trình thêm woo
 
 	function my_custom_wc_support(){
@@ -66,10 +69,10 @@ public function start_el( &$output, $item, $depth = 0, $args = null, $id = 0 ) {
 		$classes   = empty( $item->classes ) ? array() : (array) $item->classes;
 		$classes[] = 'menu-item-' . $item->ID;
 
-		
+
 		$args = apply_filters( 'nav_menu_item_args', $args, $item, $depth );
 
-		
+
 		$class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item, $args, $depth ) );
 		$class_names = $class_names ? ' class="' . esc_attr( $class_names ) . '"' : '';
 
@@ -114,7 +117,7 @@ public function start_el( &$output, $item, $depth = 0, $args = null, $id = 0 ) {
 		$item_output .= '</a>';
 		$item_output .= $args->after;
 
-		
+
 		$output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
 	}
 }
@@ -234,7 +237,7 @@ if ( ! function_exists( 'baitap_entry_content' ) ) {
 function wp_get_pagination($getposts)
 {
   $big = 999999999; // need an unlikely integer
-  global $wp_query;
+  //global $wp_query;
   $pages = paginate_links(array(
     'base' => str_replace($big, '%#%', esc_url(get_pagenum_link($big))),
     'format' => '?paged=%#%',
@@ -255,3 +258,77 @@ function wp_get_pagination($getposts)
        echo '</ul></div>';
         }
 }
+/*--------
+TEMPLATE FUNCTIONS */
+if (!function_exists('thachpham_header')) {
+    function thachpham_header() { ?>
+        <div class="site-name">
+            <?php
+            global $tp_options;
+
+            if( $tp_options['logo-on'] == 0 ) :
+                ?>
+                <?php
+                if ( is_home() ) {
+                    printf( '<h1><a href="%1$s" title="%2$s">%3$s</a></h1>',
+                        get_bloginfo('url'),
+                        get_bloginfo('description'),
+                        get_bloginfo('sitename') );
+                } else {
+                    printf( '<p><a href="%1$s" title="%2$s">%3$s</a></p>',
+                        get_bloginfo('url'),
+                        get_bloginfo('description'),
+                        get_bloginfo('sitename') );
+                }
+                ?>
+
+            <?php
+            else :
+                ?>
+                <img src="<?php echo $tp_options['logo-image']['url']; ?>" />
+            <?php endif; ?>
+        </div>
+        <div class="site-description"><?php bloginfo('description'); ?></div><?php
+    }
+}
+function setting_footer(){
+    global $tp_options;
+    echo '' . $tp_options['footer'];
+}
+function sdt(){
+    global $tp_options;
+    echo '' . $tp_options['sdt'];
+}
+function Email(){
+    global $tp_options;
+    echo '' . $tp_options['mail'];
+}
+function add(){
+    global $tp_options;
+    echo '' . $tp_options['add'];
+}
+
+
+add_action( 'admin_init', 'register_settings' );
+//add css baitap theme
+function baitap_styles()
+{
+    wp_enqueue_style('custom', get_template_directory_uri() . '/assets/css/custom.css', 'all');
+    wp_enqueue_style('templatemo-stand-blog', get_template_directory_uri() . '/assets/css/templatemo-stand-blog.css', 'all');
+    wp_enqueue_style('fontawesome', get_template_directory_uri() . '/assets/css/fontawesome.css', 'all');
+    wp_enqueue_style('owl', get_template_directory_uri() . '/assets/css/owl.css', 'all');
+}
+add_action( 'wp_enqueue_scripts', 'baitap_styles' );
+
+function js_style()
+{
+    //add style.js
+    wp_enqueue_script( 'jquery', get_template_directory_uri() . '/vendor/jquery/jquery.min.js',[], null, true);
+    wp_enqueue_script( 'bundle', get_template_directory_uri() . '/vendor/bootstrap/js/bootstrap.bundle.min.js',[],null, true);
+    wp_enqueue_script( 'custom', get_template_directory_uri() . '/assets/js/custom.js',[], null, true);
+    wp_enqueue_script( 'owl', get_template_directory_uri() . '/assets/js/owl.js',[], null, true);
+    wp_enqueue_script( 'slick', get_template_directory_uri() . '/assets/js/slick.js',[], null,true);
+    wp_enqueue_script( 'isotope', get_template_directory_uri() . '/assets/js/isotope.js ',[], null, true);
+    wp_enqueue_script( 'accordions', get_template_directory_uri() . '/assets/js/accordions.js',[], '1.1',true);
+}
+add_action( 'wp_enqueue_scripts', 'js_style' );

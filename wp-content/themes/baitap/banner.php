@@ -17,7 +17,7 @@
               <div class="row">
                 <div class="col-lg-8">
                   <span><?php the_title(); ?></span>
-                  <h4><?php echo get_post_meta( get_the_ID(),'content_qc', true ); ?></h4>
+                      <h4><?php echo get_post_meta( get_the_ID(),'content_qc', true ); ?></h4>
                 </div>
                 <div class="col-lg-4">
                   <div class="main-button">
